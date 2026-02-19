@@ -15,9 +15,15 @@
             --shadow: rgba(0, 0, 0, 0.1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -36,10 +42,6 @@
             box-shadow: 0 2px 10px var(--shadow);
         }
 
-        nav {
-            position: relative;
-        }
-
         nav ul {
             display: flex;
             justify-content: center;
@@ -47,7 +49,9 @@
             padding: 1rem;
         }
 
-        nav ul li { margin: 0 1rem; }
+        nav ul li {
+            margin: 0 1rem;
+        }
 
         nav ul li a {
             text-decoration: none;
@@ -56,18 +60,8 @@
             transition: color 0.3s;
         }
 
-        nav ul li a:hover { color: var(--primary-purple); }
-
-        .menu-toggle {
-            display: none;
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-            font-size: 2rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--dark-gray);
+        nav ul li a:hover {
+            color: var(--primary-purple);
         }
 
         section {
@@ -80,9 +74,15 @@
             text-align: center;
         }
 
-        .container { max-width: 1200px; width: 100%; }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
 
-        h1, h2 { font-weight: 700; margin-bottom: 1rem; }
+        h1, h2 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
 
         h1 {
             font-size: 3rem;
@@ -91,9 +91,15 @@
             -webkit-text-fill-color: transparent;
         }
 
-        h2 { font-size: 2.5rem; color: var(--primary-purple); }
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-purple);
+        }
 
-        p { font-size: 1.2rem; margin-bottom: 2rem; }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
 
         .btn {
             display: inline-block;
@@ -113,7 +119,11 @@
             box-shadow: 0 10px 20px var(--shadow);
         }
 
-        #home { position: relative; overflow: hidden; }
+        /* Hero Section */
+        #home {
+            position: relative;
+            overflow: hidden;
+        }
 
         #home .floating-sphere {
             position: absolute;
@@ -133,6 +143,7 @@
             50% { transform: translateY(-20px); }
         }
 
+        /* Benefits Section */
         #benefits .benefit-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -148,10 +159,16 @@
             transition: transform 0.3s;
         }
 
-        .benefit-item:hover { transform: translateY(-10px); }
+        .benefit-item:hover {
+            transform: translateY(-10px);
+        }
 
-        .benefit-item .icon { font-size: 3rem; margin-bottom: 1rem; }
+        .benefit-item .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
+        /* Plans Section */
         #plans .plan-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -167,14 +184,25 @@
             transition: transform 0.3s;
         }
 
-        .plan-card:hover { transform: translateY(-10px); }
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
 
-        .plan-card h3 { color: var(--primary-purple); margin-bottom: 1rem; }
+        .plan-card h3 {
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+        }
 
-        .plan-card ul { list-style: none; margin-bottom: 2rem; }
+        .plan-card ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
 
-        .plan-card ul li { margin-bottom: 0.5rem; }
+        .plan-card ul li {
+            margin-bottom: 0.5rem;
+        }
 
+        /* Contact Form */
         #contact form {
             max-width: 600px;
             margin: 0 auto;
@@ -193,12 +221,20 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        #other-niche { display: none; }
+        #other-niche {
+            display: none;
+        }
 
-        .phone-fields { display: flex; gap: 1rem; }
+        .phone-fields {
+            display: flex;
+            gap: 1rem;
+        }
 
-        .phone-fields input { flex: 1; }
+        .phone-fields input {
+            flex: 1;
+        }
 
+        /* Chat Button */
         #chat-button {
             position: fixed;
             bottom: 2rem;
@@ -217,8 +253,11 @@
             z-index: 1000;
         }
 
-        #chat-button:hover { transform: scale(1.1); }
+        #chat-button:hover {
+            transform: scale(1.1);
+        }
 
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -233,7 +272,9 @@
             overflow-y: auto;
         }
 
-        .modal-content { padding: 1rem; }
+        .modal-content {
+            padding: 1rem;
+        }
 
         .close {
             position: absolute;
@@ -241,6 +282,30 @@
             right: 0.5rem;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--dark-gray);
+        }
+
+        .faq-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-gold));
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, var(--primary-gold), var(--primary-purple));
         }
 
         .faq-answer {
@@ -253,97 +318,266 @@
             margin-top: 0.5rem;
         }
 
-        .faq-answer.open { max-height: 500px; }
-
-        @media (max-width: 768px) {
-
-            h1 { font-size: 2rem; }
-            h2 { font-size: 2rem; }
-
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background: var(--white);
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                box-shadow: 0 5px 15px var(--shadow);
-            }
-
-            nav ul.active { display: flex; }
-
-            nav ul li { margin: 1rem 0; }
-
-            .menu-toggle { display: block; }
-
-            .benefit-list,
-            .plan-cards { grid-template-columns: 1fr; }
-
-            .modal {
-                width: 90%;
-                right: 5%;
-            }
+        .faq-answer.open {
+            max-height: 500px;
         }
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 2rem; }
+
+    nav ul { 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    nav ul li { 
+        margin: 0.5rem 0; 
+    }
+
+    .benefit-list, 
+    .plan-cards { 
+        grid-template-columns: 1fr; 
+    }
+
+    .modal {
+        width: 90%;
+        right: 5%;
+        bottom: 5rem;
+    }
+
+    /* 🔹 Ajustes extras importantes */
+
+    section {
+        padding: 6rem 1rem 2rem;
+    }
+
+    .phone-fields {
+        flex-direction: column;
+    }
+
+    #chat-button {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+}
+
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Novyra Studio</a></li>
+                <li><a href="#why">Why Businesses Lose Clients</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <nav>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-        <ul>
-            <li><a href="#home">Novyra Studio</a></li>
-            <li><a href="#why">Why Businesses Lose Clients</a></li>
-            <li><a href="#benefits">Benefits</a></li>
-            <li><a href="#plans">Plans</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <section id="home">
+        <div class="container">
+            <div class="floating-sphere"></div>
+            <h1>Websites That Turn Visitors Into Paying Clients</h1>
+            <p>Premium websites optimized for conversion and growth.</p>
+            <a href="#contact" class="btn">Book Your Free Strategy Call</a>
+        </div>
+    </section>
 
-<!-- RESTANTE DO HTML IGUAL AO SEU (home, why, benefits, plans, contact, modal) -->
+    <section id="why">
+        <div class="container">
+            <h2>Why Businesses Lose Clients</h2>
+            <p>Without a professional website, businesses lose clients due to lack of trust, poor online presence, and low authority.</p>
+        </div>
+    </section>
 
-<script>
-document.getElementById('niche').addEventListener('change', function() {
-    const otherInput = document.getElementById('other-niche');
-    if (this.value === 'Other') {
-        otherInput.style.display = 'block';
-        otherInput.required = true;
-    } else {
-        otherInput.style.display = 'none';
-        otherInput.required = false;
-    }
-});
+    <section id="benefits">
+        <div class="container">
+            <h2>Benefits</h2>
+            <div class="benefit-list">
+                <div class="benefit-item">
+                    <div class="icon">🛡️</div>
+                    <h3>Build Trust</h3>
+                    <p>A professional website reassures potential clients.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">⏰</div>
+                    <h3>24/7 Presence</h3>
+                    <p>Attract leads even when you’re offline.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">👑</div>
+                    <h3>Professional Authority</h3>
+                    <p>Position your brand as an expert.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">📈</div>
+                    <h3>Increase Conversions</h3>
+                    <p>Optimized websites convert visitors into paying clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-const modal = document.getElementById('faq-modal');
-const chatBtn = document.getElementById('chat-button');
-const closeBtn = document.querySelector('.close');
+    <section id="plans">
+        <div class="container">
+            <h2>Plans</h2>
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <h3>Starter / Básico</h3>
+                    <p>$300 / R$300</p>
+                    <ul>
+                        <li>Custom design</li>
+                        <li>Mobile responsive</li>
+                        <li>Basic SEO</li>
+                        <li>1 month support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Book Your Free Strategy Call</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Growth / Crescimento</h3>
+                    <p>$500 / R$500</p>
+                    <ul>
+                        <li>Everything in Starter</li>
+                        <li>Advanced SEO</li>
+                        <li>AI Optimizations</li>
+                        <li>3 months support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Book Your Free Strategy Call</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Premium</h3>
+                    <p>$1000 / R$1000</p>
+                    <ul>
+                        <li>Everything in Growth</li>
+                        <li>E-commerce integration</li>
+                        <li>Custom advanced features</li>
+                        <li>6 months support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Book Your Free Strategy Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-chatBtn.addEventListener('click', () => modal.style.display = 'block');
-closeBtn.addEventListener('click', () => modal.style.display = 'none');
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/xnjbzlaw" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <select name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="United States">United States</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="phone-fields">
+                    <input type="text" name="ddd" placeholder="DDD" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                </div>
+                <select name="niche" id="niche" required>
+                    <option value="">Select Niche</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Health">Health</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" name="other-niche" id="other-niche" placeholder="Specify Other Niche">
+                <select name="plan" required>
+                    <option value="">Select Plan</option>
+                    <option value="Starter/Básico">Starter/Básico</option>
+                    <option value="Growth/Crescimento">Growth/Crescimento</option>
+                    <option value="Premium">Premium</option>
+                </select>
+                <textarea name="message" placeholder="Message (optional)"></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
 
-window.addEventListener('click', function(event) {
-    if (event.target === modal) modal.style.display = 'none';
-});
+    <div id="chat-button">🗨</div>
 
-document.querySelectorAll('.faq-question').forEach(question => {
+    <div id="faq-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 style="color: var(--primary-purple); margin-bottom: 1rem;">FAQ - Plans</h3>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question">Starter / Entrada</div>
+                    <div class="faq-answer">
+                        <p><strong>Features:</strong> Custom design, mobile responsive, basic SEO, 1 month support.</p>
+                        <p><strong>Benefits:</strong> Builds a solid online foundation with professional appearance and search visibility.</p>
+                        <p><strong>Why choose it:</strong> Ideal for small businesses starting their digital presence without high costs.</p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Growth / Crescimento</div>
+                    <div class="faq-answer">
+                        <p><strong>Features:</strong> Everything in Starter, advanced SEO, AI optimizations, 3 months support.</p>
+                        <p><strong>Benefits:</strong> Enhances growth with better rankings, automated improvements, and extended assistance.</p>
+                        <p><strong>Why choose it:</strong> Perfect for businesses ready to scale and leverage advanced tools for better performance.</p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question">Premium</div>
+                    <div class="faq-answer">
+                        <p><strong>Features:</strong> Everything in Growth, e-commerce integration, custom advanced features, 6 months support.</p>
+                        <p><strong>Benefits:</strong> Full-featured solution for online sales and tailored functionalities with long-term support.</p>
+                        <p><strong>Why choose it:</strong> Best for established businesses needing comprehensive, high-end digital solutions.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Handle niche select
+        document.getElementById('niche').addEventListener('change', function() {
+            const otherInput = document.getElementById('other-niche');
+            if (this.value === 'Other') {
+                otherInput.style.display = 'block';
+                otherInput.required = true;
+            } else {
+                otherInput.style.display = 'none';
+                otherInput.required = false;
+            }
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('faq-modal');
+        const chatBtn = document.getElementById('chat-button');
+        const closeBtn = document.querySelector('.close');
+
+        chatBtn.onclick = function() {
+            modal.style.display = 'block';
+        };
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        };
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        // FAQ expand/collapse
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(question => {
     question.addEventListener('click', function() {
         const answer = this.nextElementSibling;
         const isOpen = answer.classList.contains('open');
-        document.querySelectorAll('.faq-answer')
-            .forEach(ans => ans.classList.remove('open'));
-        if (!isOpen) answer.classList.add('open');
+        // Close all answers
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.remove('open'));
+        // Open this one if not already open
+        if (!isOpen) {
+            answer.classList.add('open');
+        }
     });
 });
-
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.querySelector('nav ul');
-
-menuToggle.addEventListener('click', function() {
-    navMenu.classList.toggle('active');
-});
-</script>
-
-</body>
-</html>
