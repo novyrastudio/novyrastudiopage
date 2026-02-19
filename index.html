@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Novyra Studio - Premium Digital Agency</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -12,267 +12,176 @@
     --primary-gold: #FFD700;
     --white: #FFFFFF;
     --light-gray: #F5F5F5;
-    --dark-gray: #333333;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --dark-gray: #333;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html { scroll-behavior: smooth; }
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
-    color: var(--dark-gray);
-    line-height: 1.6;
+    font-family:'Montserrat',sans-serif;
+    background:linear-gradient(135deg,#fff,#f5f5f5);
+    color:var(--dark-gray);
 }
 
 /* HEADER */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    box-shadow: 0 2px 10px var(--shadow);
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index:1000;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    position: relative;
+.nav-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:1rem;
+    position:relative;
 }
 
-.menu-toggle {
-    display: none;
-    position: absolute;
-    right: 1.5rem;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+.menu-toggle{
+    display:none;
+    position:absolute;
+    right:1.5rem;
+    font-size:1.8rem;
+    background:none;
+    border:none;
+    cursor:pointer;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+.nav-links{
+    display:flex;
+    gap:2rem;
+    list-style:none;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: var(--dark-gray);
-    font-weight: 500;
-    transition: color 0.3s;
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark-gray);
+    font-weight:500;
 }
 
-.nav-links li a:hover {
-    color: var(--primary-purple);
+.nav-links a:hover{
+    color:var(--primary-purple);
 }
 
 /* SECTIONS */
-section {
-    min-height: 100vh;
-    padding: 5rem 2rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+section{
+    min-height:100vh;
+    padding:7rem 2rem 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
-.container {
-    max-width: 1200px;
-    width: 100%;
+.container{ max-width:1000px; }
+
+h1{
+    font-size:3rem;
+    background:linear-gradient(135deg,var(--primary-purple),var(--primary-gold));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-h1, h2 {
-    font-weight: 700;
-    margin-bottom: 1rem;
+h2{
+    font-size:2.2rem;
+    margin-bottom:1rem;
+    color:var(--primary-purple);
 }
 
-h1 {
-    font-size: 3rem;
-    background: linear-gradient(135deg, var(--primary-purple), var(--primary-gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+p{ margin:1rem 0; }
 
-h2 {
-    font-size: 2.5rem;
-    color: var(--primary-purple);
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, var(--primary-purple), var(--primary-gold));
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    border: none;
-}
-
-.btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--shadow);
-}
-
-/* HERO */
-#home {
-    position: relative;
-    overflow: hidden;
-}
-
-#home .floating-sphere {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, rgba(94, 46, 140, 0.3), rgba(255, 215, 0, 0.3));
-    border-radius: 50%;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%,100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-/* BENEFITS */
-#benefits .benefit-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.benefit-item {
-    padding: 2rem;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px var(--shadow);
-    transition: transform 0.3s;
-}
-
-.benefit-item:hover {
-    transform: translateY(-10px);
-}
-
-.benefit-item .icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.btn{
+    display:inline-block;
+    padding:1rem 2rem;
+    background:linear-gradient(135deg,var(--primary-purple),var(--primary-gold));
+    color:white;
+    border-radius:50px;
+    text-decoration:none;
+    margin-top:1rem;
 }
 
 /* PLANS */
-#plans .plan-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.plan-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:2rem;
+    margin-top:2rem;
 }
 
-.plan-card {
-    padding: 2rem;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px var(--shadow);
-    transition: transform 0.3s;
-}
-
-.plan-card:hover {
-    transform: translateY(-10px);
-}
-
-/* CONTACT */
-#contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px var(--shadow);
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.phone-fields {
-    display: flex;
-    gap: 1rem;
-}
-
-.phone-fields input {
-    flex: 1;
+.plan-card{
+    background:white;
+    padding:2rem;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* CHAT */
-#chat-button {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 55px;
-    height: 55px;
-    background: linear-gradient(135deg, var(--primary-purple), var(--primary-gold));
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6rem;
-    cursor: pointer;
-    box-shadow: 0 5px 15px var(--shadow);
-    z-index: 1000;
+#chat-button{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--primary-purple),var(--primary-gold));
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    cursor:pointer;
+    z-index:1000;
 }
 
+#chat-box{
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    width:300px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    padding:1rem;
+    display:none;
+}
+
+.faq-question{
+    font-weight:600;
+    cursor:pointer;
+    margin:0.5rem 0;
+}
+
+.faq-answer{
+    display:none;
+    font-size:0.9rem;
+    margin-bottom:0.5rem;
+}
+
+.faq-answer.open{ display:block; }
+
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-    h1 { font-size: 2rem; }
-    h2 { font-size: 2rem; }
+    h1{ font-size:2rem; }
 
-    .menu-toggle { display: block; }
+    .menu-toggle{ display:block; }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: white;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px var(--shadow);
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        right:20px;
+        background:white;
+        padding:1rem;
+        border-radius:8px;
     }
 
-    .nav-links.active { display: flex; }
-
-    .benefit-list,
-    .plan-cards {
-        grid-template-columns: 1fr;
-    }
+    .nav-links.active{ display:flex; }
 }
 </style>
 </head>
@@ -281,25 +190,102 @@ form input, form select, form textarea {
 
 <header>
 <nav class="nav-container">
-    <button class="menu-toggle" id="menu-toggle">☰</button>
-    <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Novyra Studio</a></li>
-        <li><a href="#why">Why Businesses Lose Clients</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="#plans">Plans</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<button class="menu-toggle" id="menu-toggle">☰</button>
+<ul class="nav-links" id="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#why">Why</a></li>
+<li><a href="#plans">Plans</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 </header>
 
-<!-- RESTANTE DO SEU SITE PERMANECE IGUAL -->
+<section id="home">
+<div class="container">
+<h1>Novyra Studio</h1>
+<p>Premium digital presence for ambitious businesses.</p>
+<a href="#plans" class="btn">View Plans</a>
+</div>
+</section>
+
+<section id="why">
+<div class="container">
+<h2>Why Businesses Lose Clients</h2>
+<p>Poor branding, weak digital positioning and lack of strategic presence.</p>
+</div>
+</section>
+
+<section id="plans">
+<div class="container">
+<h2>Our Plans</h2>
+<div class="plan-grid">
+
+<div class="plan-card">
+<h3>Starter / Entrada</h3>
+<p>Perfect for businesses starting online.</p>
+</div>
+
+<div class="plan-card">
+<h3>Growth / Crescimento</h3>
+<p>For companies ready to expand visibility.</p>
+</div>
+
+<div class="plan-card">
+<h3>Premium</h3>
+<p>Complete authority and high-end positioning.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2>Contact</h2>
+<p>Ready to elevate your brand?</p>
+<a href="#" class="btn">Get Started</a>
+</div>
+</section>
+
+<!-- CHAT -->
+<div id="chat-button">💬</div>
+
+<div id="chat-box">
+<div class="faq-question">Starter Plan</div>
+<div class="faq-answer">
+Includes basic branding, website setup and essential positioning.
+</div>
+
+<div class="faq-question">Growth Plan</div>
+<div class="faq-answer">
+Advanced strategy, SEO foundation and authority building.
+</div>
+
+<div class="faq-question">Premium Plan</div>
+<div class="faq-answer">
+Full digital dominance, premium design and complete positioning system.
+</div>
+</div>
 
 <script>
-const toggleBtn = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+const toggleBtn=document.getElementById('menu-toggle');
+const navLinks=document.getElementById('nav-links');
+toggleBtn.addEventListener('click',()=>navLinks.classList.toggle('active'));
 
-toggleBtn.addEventListener('click', function(){
-    navLinks.classList.toggle('active');
+const chatBtn=document.getElementById('chat-button');
+const chatBox=document.getElementById('chat-box');
+chatBtn.addEventListener('click',()=>{
+chatBox.style.display=chatBox.style.display==='block'?'none':'block';
+});
+
+const faqQuestions=document.querySelectorAll('.faq-question');
+faqQuestions.forEach(q=>{
+q.addEventListener('click',function(){
+const answer=this.nextElementSibling;
+const isOpen=answer.classList.contains('open');
+document.querySelectorAll('.faq-answer').forEach(a=>a.classList.remove('open'));
+if(!isOpen){ answer.classList.add('open'); }
+});
 });
 </script>
 
